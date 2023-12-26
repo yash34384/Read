@@ -1,0 +1,44 @@
+@import '../../index.scss';
+
+.social {
+  font-size: 1.8rem;
+}
+
+.footer {
+  width: 100%;
+  background-color: $font-color;
+
+  > .footer-boxes {
+    width: 100%;
+    @include center(center, space-around);
+    flex-wrap: wrap;
+
+    > .box {
+      width: 18rem;
+      height: 18rem;
+      @include center(flex-start, center);
+      flex-direction: column;
+
+      > .head {
+        font-size: 2.2rem;
+        color: $font-hover;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      > .foot-options {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: $font-hover;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  > .copyright {
+    padding: 2rem 0;
+    @include center(center, center);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $font-hover;
+  }
+}

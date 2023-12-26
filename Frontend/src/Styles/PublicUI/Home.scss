@@ -1,0 +1,85 @@
+@import '../../index.scss';
+
+.poster-section {
+  height: 86vh;
+  width: 100%;
+
+  > img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.heading {
+  @include Allheading;
+}
+
+.hot-deals {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: $background;
+  @include center(center, center);
+
+  > .boxes {
+    width: 80%;
+    height: 18rem;
+    border-radius: 2rem;
+    border-top: 2px solid $font-hover;
+    background-color: $font-color;
+    @include center(center, space-around);
+
+    > .box {
+      color: $font-hover;
+      width: 30%;
+      height: 100%;
+      @include center(flex-start, space-around);
+      flex-direction: column;
+
+      > .icon {
+        font-size: 4rem;
+      }
+      > .title {
+        font-size: 3rem;
+      }
+      > .desc {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.gotoicon {
+  font-size: 3rem;
+  color: $font-hover;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.gotoicon:hover {
+  scale: 1.1;
+}
+
+@media screen and (max-width: 1000px) {
+  .hot-deals {
+    > .boxes {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hot-deals {
+    > .boxes {
+      > .box {
+        > .icon {
+          font-size: 3rem;
+        }
+        > .title {
+          font-size: 2rem;
+        }
+        > .desc {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

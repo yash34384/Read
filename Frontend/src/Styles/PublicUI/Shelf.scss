@@ -1,0 +1,36 @@
+@import '../../index.scss';
+
+.category {
+  background-color: $background;
+  width: 100%;
+  height: 10rem;
+  @include center(center, center);
+  flex-wrap: wrap;
+
+  > .cate-type {
+    cursor: pointer;
+    margin-right: 2rem;
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    background-color: $font-color;
+    color: $font-hover;
+  }
+  > .cate-type:hover {
+    background-color: $font-hover;
+    color: $font-color;
+  }
+}
+
+.books-box {
+  width: 100%;
+  background-color: $background;
+  @include center(center, space-around);
+  flex-wrap: wrap;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+}

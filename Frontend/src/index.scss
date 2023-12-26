@@ -1,0 +1,33 @@
+// imported
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// colors
+$background: #ffe8d6;
+$font-color: #bb9457;
+$font-hover: #99582a;
+
+// applied for all
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'Exo 2', sans-serif;
+}
+
+// common mixins
+@mixin center($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin Allheading {
+  width: 100%;
+  font-size: 3rem;
+  @include center(center, center);
+  padding: 1.5rem 0;
+  background-color: $background;
+  font-weight: 700;
+  color: $font-hover;
+}

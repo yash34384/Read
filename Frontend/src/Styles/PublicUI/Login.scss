@@ -1,0 +1,72 @@
+@import '../../index.scss';
+
+.login-page {
+  width: 100%;
+  background-color: $background;
+  padding: 3rem 0;
+  @include center(center, center);
+  flex-wrap: wrap;
+}
+
+.login {
+  padding: 2rem 0;
+  box-sizing: border-box;
+  width: 35rem;
+  height: 40rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  @include center(center, space-between);
+  flex-direction: column;
+  background-color: $font-hover;
+
+  > .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $font-color;
+  }
+  form {
+    @include center(center, space-between);
+    flex-direction: column;
+  }
+  .inputs {
+    width: 25rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    font-size: 2rem;
+    background-color: $font-color;
+    color: $font-hover;
+    margin-bottom: 1.5rem;
+  }
+  .inputs-submit {
+    width: 25rem;
+    height: 3rem;
+    border: 1px solid white;
+    color: $font-hover;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: $font-color;
+    border-radius: 1rem;
+    padding: 0 1rem;
+  }
+  > .other-options {
+    @include center(center, space-between);
+    width: 90%;
+
+    > a {
+      font-size: 1.5rem;
+      color: white;
+    }
+    > span {
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

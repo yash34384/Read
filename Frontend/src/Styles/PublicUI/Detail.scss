@@ -1,0 +1,45 @@
+@import '../../index.scss';
+
+.detail-box {
+  @include center(center, flex-start);
+  width: 100%;
+  background-color: $background;
+  > .detail-pics {
+    width: 50%;
+  }
+  > .detail-det {
+    width: 50%;
+    padding: 5rem 3rem;
+    line-height: 6rem;
+    > p {
+      color: $font-hover;
+    }
+    > .det-name {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .det-price {
+      font-size: 2.5rem;
+      color: $font-hover;
+      font-weight: 600;
+    }
+    > .det-cart-box {
+      width: 20rem;
+      @include center(center, space-between);
+    }
+    .det-oth {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    button {
+      padding: 0.5rem 2.5rem;
+      border: none;
+      border-radius: 0.2rem;
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: 600;
+      background-color: $font-color;
+      color: $font-hover;
+    }
+  }
+}

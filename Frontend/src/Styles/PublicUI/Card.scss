@@ -1,0 +1,58 @@
+@import '../../index.scss';
+
+.card-box {
+  cursor: pointer;
+  width: 30rem;
+  height: 30rem;
+  background-color: $font-color;
+  margin-bottom: 5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: all 0.2s linear;
+
+  > .card-img-sec {
+    width: 100%;
+    height: 20rem;
+  }
+
+  > .card-det {
+    width: 100%;
+    height: 10rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: $font-hover;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    @include center(center, space-between);
+
+    > .card-over {
+      width: 70%;
+      > p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: black;
+      }
+    }
+
+    > button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.2rem;
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: 600;
+      background-color: $font-color;
+      color: $font-hover;
+    }
+
+    > button:hover {
+      background-color: $font-hover;
+      color: $font-color;
+      border: 1px solid $font-color;
+    }
+  }
+}
+
+.card-box:hover {
+  scale: 1.1;
+}

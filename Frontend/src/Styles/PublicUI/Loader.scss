@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.loading {
+  @include center(center, center);
+  background-color: $background;
+  > .spinner {
+    font-size: 5rem;
+    color: $font-hover;
+  }
+  transition: all 0.2s linear;
+}
