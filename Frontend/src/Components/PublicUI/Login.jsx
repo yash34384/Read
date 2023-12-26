@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../Styles/PublicUI/Login.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, registerUser } from '../../store/UserSlice';
 
 const Login = () => {
@@ -13,6 +13,7 @@ const Login = () => {
     document.querySelector('.register-p').classList.toggle('hide');
   }
 
+  const { isAuthenticated } = useSelector(state => state.user);
   const dispatch = useDispatch();
 
   // for registeration
@@ -67,6 +68,14 @@ const Login = () => {
     form.set('password', loginPass);
     dispatch(loginUser(form));
   }
+
+  // redirect to account if login
+  const history = useNavigate();
+  useEffect(() => {
+    if (isAuthenticated) {
+      history('/account');
+    }
+  }, [isAuthenticated, history]);
 
   return (
     <div className="login-page">
