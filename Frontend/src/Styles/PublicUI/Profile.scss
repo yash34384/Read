@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+.profile_page {
+  background-color: $background;
+  width: 100%;
+  @include center(center, space-around);
+  flex-wrap: wrap;
+  padding: 5rem 0;
+
+  > img {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+  }
+
+  > .other_section {
+    // background-color: aqua;
+    width: 50%;
+    height: 100%;
+
+    > span {
+      font-size: 5rem;
+      font-weight: 600;
+      color: $font-color;
+    }
+  }
+}

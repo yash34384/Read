@@ -36,7 +36,7 @@ const Header = () => {
           </Link>
           {isAuthenticated ? (
             <Link to={'/account'}>
-              <img src="" alt="dp" />
+              <i class="fa-solid fa-user profile"></i>
             </Link>
           ) : (
             <Link to={'/login'}>
