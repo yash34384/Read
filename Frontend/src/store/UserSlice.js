@@ -54,7 +54,19 @@ export const UserSlice = createSlice({
         state.status = 'error',
           state.isAuthenticated = 'false',
           state.data = null
-
+      })
+      .addCase(logoutUser.pending, (state, action) => {
+        state.status = 'pending'
+        state.isAuthenticated = true
+      })
+      .addCase(logoutUser.fulfilled, (state, action) => {
+        state.status = 'fulfilled',
+          state.data = null,
+          state.isAuthenticated = false
+      })
+      .addCase(logoutUser.rejected, (state, action) => {
+        state.status = 'error',
+          state.isAuthenticated = true
       })
   }
 })
@@ -91,3 +103,11 @@ export const getLoginUser = createAsyncThunk('user/detail', async () => {
     return err.response.data;
   }
 });
+
+export const logoutUser = createAsyncThunk('user/logout', async () => {
+  try {
+    await axios.get(`/api/v1/logout`);
+  } catch (err) {
+    console.log(err);
+  }
+})

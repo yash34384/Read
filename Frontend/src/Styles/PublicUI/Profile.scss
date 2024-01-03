@@ -17,11 +17,24 @@
     // background-color: aqua;
     width: 50%;
     height: 100%;
+    @include center(flex-start, space-around);
+    flex-direction: column;
 
     > span {
       font-size: 5rem;
       font-weight: 600;
       color: $font-color;
+    }
+
+    > button {
+      border: none;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      background-color: hsl(0, 100%, 50%);
+      color: white;
+      cursor: pointer;
     }
   }
 }
